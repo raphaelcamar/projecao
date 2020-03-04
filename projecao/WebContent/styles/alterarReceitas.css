@@ -1,0 +1,50 @@
+html, body{
+    width: 100%;
+    overflow: hidden;
+}
+.content{
+    margin: 0 auto;
+    width: 50%;
+    display: flex;
+    align-content: center;
+    border-style: solid;
+    display:flex;
+    border-width: thin;
+    border-color:rgb(224, 147, 3);
+    border-radius: 5px;
+}
+h1{
+    margin-bottom:5%;
+    width: 30%;
+    border-bottom: 2px solid;
+    border-image-source: radial-gradient( rgb(230, 151, 6), rgba(93, 91, 89, 0));
+    border-image-slice: 1;
+}
+form{
+    width: 50%;
+    margin: 0 auto;
+    height: 100%;
+}
+form input{
+    margin-top:2%;
+    padding: 5px, 20px, 5px, 20px;
+    height: 50%;
+    width: 100%;
+    margin-bottom: 2%;
+    display:flex;
+    justify-content: center;
+    background-color: rgb(206, 203, 203);
+    border-style: none;
+}
+input{
+    padding:10px;
+}
+button{
+    padding:10px 30px;
+    background-color: rgb(23, 199, 23);
+    border-style: none;
+    border-radius: 2px;
+    color:white;
+    margin: 0 auto;
+    margin-bottom:2%;
+}
