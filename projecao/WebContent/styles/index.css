@@ -89,10 +89,10 @@ padding: 15px;
   font-size: 12px;
   border-bottom: solid 1px rgba(58, 34, 34, 0.92);
 }
-#del{
+.del{
 	background-color:red;
 }
-#del:hover{
+.del:hover{
     background-color:rgb(194, 11, 11);
 }
 .proj-feitas{
@@ -107,4 +107,5 @@ thead{
   background-color: #545351;
   color:white;
 }
+
 

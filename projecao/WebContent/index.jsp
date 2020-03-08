@@ -8,7 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="styles/reset.css">
     <link rel="stylesheet" type="text/css" href="styles/index.css">
-
+    
 </head>
 <body>
     <div class="header">
@@ -31,10 +31,6 @@
             <input type="text" name="ano" id="data" placeholder="ex: 2020">
         </div>
 
-        <div class="elements">
-        <label for="valor">Valor:</label>
-            <input type="number" name="valor" id="valor" placeholder="Ex: 222.255.367.22">
-        </div>
         <div class="elements botao">
         <button>Cadastrar</button>
         </div>
@@ -54,39 +50,14 @@
             <td>Editar</td>
             <td>deletar</td>
         </tr>
+        
     </thead>
     <tbody>
-        <tr>
-            <td>Juros de crédito</td>
-            <td>2020</td>
-            <td>1.225.325.20</td>
-            <td><button id="edit">Editar</button></td>
-            <td><button id="del">Deletar</button></td>
-        </tr>
-         <tr>
-            <td>Juros de crédito</td>
-            <td>2020</td>
-            <td>1.225.325.20</td>
-            <td><button id="edit">Editar</button></td>
-            <td><button id="del">Deletar</button></td>
-        </tr>
-         <tr>
-            <td>Juros de crédito</td>
-            <td>2020</td>
-            <td>1.225.325.20</td>
-            <td><button id="edit">Editar</button></td>
-            <td><button id="del">Deletar</button></td>
-        </tr>
-         <tr>
-            <td>Juros de crédito</td>
-            <td>2020</td>
-            <td>1.225.325.20</td>
-            <td><button id="edit">Editar</button></td>
-            <td><button id="del">Deletar</button></td>
-        </tr>
+     
     </tbody>
     </table>
 </div>
 <script type="text/javascript" src="js/main.js"></script>
+
 </body>
 </html>

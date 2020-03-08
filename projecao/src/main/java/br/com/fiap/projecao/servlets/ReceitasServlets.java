@@ -26,14 +26,16 @@ public class ReceitasServlets extends HttpServlet {
 		Receitas r = new Receitas();
 		Receitas re = new Receitas();
 		
-		r.setAno("2020");
+		r.setAno("2022");
 		r.setDescricao("Crédito");
 		r.setValor(45467878);
+		r.setId(55);
 		nomes.add(r);
 		
 		re.setAno("2020");
 		re.setDescricao("Crédito");
 		re.setValor(45467878);
+		re.setId(59);
 		nomes.add(re);
 		
 		
