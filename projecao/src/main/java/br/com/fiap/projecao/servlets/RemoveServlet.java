@@ -22,6 +22,8 @@ public class RemoveServlet extends HttpServlet{
 		int id = Integer.parseInt(q);
 		System.out.println(id);
 		
+		
+		//aqui deve ser chamado o método de exclusão do objeto, e passar como parâmetro o id
 		resp.getWriter().write(new Gson().toJson("deletado com sucesso!"));
 	}
 		
