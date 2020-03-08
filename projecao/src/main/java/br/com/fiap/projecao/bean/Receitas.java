@@ -20,17 +20,16 @@ public class Receitas {
 	private int id;
 	
 	@Column(name="", nullable = false)
-	@Temporal(TemporalType.DATE)
-	private Date ano;
+	private String ano;
 	
 	@Column(name="", nullable = false)
 	@Enumerated(EnumType.STRING)
-	private TiposReceitas descricao;
+	private String descricao;
 	
 	@Column(name="")
 	private double valor;
 	
-	public Receitas(int id, Date ano, TiposReceitas descricao, double valor) {
+	public Receitas(int id, String ano, String descricao, double valor) {
 		super();
 		this.id = id;
 		this.ano = ano;
@@ -50,19 +49,19 @@ public class Receitas {
 		this.id = id;
 	}
 
-	public Date getAno() {
+	public String getAno() {
 		return ano;
 	}
 
-	public void setAno(Date ano) {
-		this.ano = ano;
+	public void setAno(String data) {
+		this.ano = data;
 	}
 
-	public TiposReceitas getDescricao() {
+	public String getDescricao() {
 		return descricao;
 	}
 
-	public void setDescricao(TiposReceitas descricao) {
+	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
 
