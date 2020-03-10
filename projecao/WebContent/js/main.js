@@ -108,10 +108,21 @@ function adionarAoInputEdicao(descricao, projecao, valor, id){
     inputs[2].value = valor
     inputs[3].value = id 
     tornarVisivel(divEdit)
+    scrollAnm(divEdit)
 }
 
 function tornarVisivel(visivel){
     visivel.classList.remove('invisible');
     visivel.classList.add('visible')
 }
+
+function scrollAnm(element) {
+    console.log(element.offsetTop)
+    window.scroll({
+      behavior: 'smooth',
+      left: 0,
+      top: element.offsetTop
+     
+    });
+  }
 

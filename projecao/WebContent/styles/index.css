@@ -1,3 +1,15 @@
+ @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -50%, 0);
+      transform: translate3d(0, -50%, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
 html, body{
     height: 100%;
     width: 100%;
@@ -98,6 +110,9 @@ thead tr td{
   font-weight:bold;
   font-size:18px
 }
+table{
+  margin-bottom:5%
+}
 thead{
   background-color: #545351;
   color:white;
@@ -111,6 +126,8 @@ thead{
     width:100%;
     height:auto;
     display:block;
+    animation-name: fadeInDown;
+    animation-duration: 0.4s;
 }
 .edit form{
   width:80%;
