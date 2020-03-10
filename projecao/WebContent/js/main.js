@@ -31,8 +31,12 @@ function criarLista(descricao, valor, data, id){
 
     btnEdit.appendChild(edit);
     btnDel.appendChild(del)
+    
     btnDel.setAttribute('id', id)
     btnDel.classList.add('del')
+
+    btnEdit.setAttribute('id', id)
+    btnEdit.classList.add('editBtn')
 
     tdDesc.textContent = descricao
     tdValor.textContent = valor
@@ -48,13 +52,29 @@ function criarLista(descricao, valor, data, id){
     tr.appendChild(tdBotao)
     tr.appendChild(tdBotaoDel)
 
-    adcionarListener(tdBotao)
-    adcionarListener(tdBotaoDel)
+    adcionarListenerEdit(tdBotao)
+    adcionarListenerDel(tdBotaoDel)
 
     table.appendChild(tr)  
 }
 
-function adcionarListener(elemento){
+function adcionarListenerEdit(elemento){
+    elemento.addEventListener('click', function(e){
+        var tdBotao = e.target.parentNode
+        var tr = tdBotao.parentNode
+        var tdValores = tr.querySelectorAll('td')
+
+       var descEd = tdValores[0].textContent
+       var proEd = tdValores[1].textContent
+       var valorEd = tdValores[2].textContent
+       console.log(valorEd)
+       var idEd = e.target.id
+
+       adionarAoInputEdicao(descEd, proEd, valorEd, idEd)
+    })
+}
+
+function adcionarListenerDel(elemento){
     elemento.addEventListener('click', function(e){
       var ids =  e.target.id
 
@@ -78,3 +98,20 @@ function EnviarId(id){
     var str = "id=" + id
     xhr1.send(str)
 }
+
+function adionarAoInputEdicao(descricao, projecao, valor, id){
+    var divEdit = document.querySelector('.edit')
+    var inputs = divEdit.querySelectorAll('input')
+
+    inputs[0].value = descricao
+    inputs[1].value = projecao
+    inputs[2].value = valor
+    inputs[3].value = id 
+    tornarVisivel(divEdit)
+}
+
+function tornarVisivel(visivel){
+    visivel.classList.remove('invisible');
+    visivel.classList.add('visible')
+}
+

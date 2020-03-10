@@ -30,7 +30,6 @@
         <label for="data">Ano da Expectativa:</label>
             <input type="text" name="ano" id="data" placeholder="ex: 2020">
         </div>
-
         <div class="elements botao">
         <button>Cadastrar</button>
         </div>
@@ -40,6 +39,29 @@
 <div class="proj-feitas">
     <div class="title-form-cad">
         <p>Projeções criadas</p>
+    </div>
+    <div class="edit invisible">
+        <p class="title-form-cad">Editar Projeção</p>
+        <form action="editarInfos" method="post">
+       
+            <label for="desc">Descrição:</label>
+            <input type="text" name="desc" id="descEdit">
+     
+       
+            <label for="anoEdit">Projeção para:</label>
+            <input type="text" name="ano" id="anoEdit">
+            
+  
+            <label for="valorEdit">Valor projetado:</label>
+            <input type="number" name="valor" id="valorEdit">
+
+            <input type="hidden" name="id">
+
+            <button id="att">Atualizar</button>
+        </form> 
+             </div>
+            
+            
     </div>
     <table id="tabelaProj">
         <thead>
@@ -56,7 +78,7 @@
      
     </tbody>
     </table>
-</div>
+
 <script type="text/javascript" src="js/main.js"></script>
 
 </body>
