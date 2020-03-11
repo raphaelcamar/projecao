@@ -8,7 +8,8 @@ import javax.persistence.Persistence;
 import javax.persistence.Query;
 import javax.persistence.criteria.CriteriaBuilder;
 
-import br.com.fiap.projecao.bean.Projecoes;
+import br.com.fiap.projecao.bean.Projecao;
+import br.com.fiap.projecao.bean.Receita;
 
 public class ReceitasDAO implements ReceitasDAOIn {
 
@@ -26,26 +27,27 @@ public class ReceitasDAO implements ReceitasDAOIn {
 
 	@Override
 	public void cadastrar(Object o) {
-		Projecoes m = (Projecoes) o;
+		Projecao m = (Projecao) o;
 		em.getTransaction().begin();
 		em.getTransaction().commit();
 		em.persist(m);
 		fecharConexao();
 
 	}
+	
 	public void receberLista() {
 		System.out.println("Entrou no método");
-		Query query = em.createQuery("select UPPER(r.vl_receita) from tb_receita r");
+		Query query = em.createQuery("select r from Receita r ");
 		List<Double> list = query.getResultList();
 		for(Double e : list) {
 			System.out.println(e);
 		}
 	}
-
+	
 	@Override
 	public void deletar(int id) {
 		em.getTransaction().begin();
-		Projecoes m = em.find(Projecoes.class, id);
+		Projecao m = em.find(Projecao.class, id);
 		em.remove(m);
 		em.getTransaction().commit();
 		fecharConexao();
@@ -54,7 +56,7 @@ public class ReceitasDAO implements ReceitasDAOIn {
 
 	@Override
 	public void Atualizar(Object o) {
-		Projecoes m = (Projecoes) o;
+		Projecao m = (Projecao) o;
 		em.getTransaction().begin();
 		em.merge(m);
 		em.getTransaction().commit();
