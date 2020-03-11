@@ -1,12 +1,12 @@
 package br.com.fiap.projecao.dao;
 
+import java.util.List;
+
+import br.com.fiap.projecao.bean.Projecoes;
+
 public interface ReceitasDAOIn {
 
 	void cadastrar(Object o);
-	
-	Object consultarPorAno(int ano);
-	
-	Object consultarPorDesc (String descricao);
 	
 	void deletar(int id);
 	

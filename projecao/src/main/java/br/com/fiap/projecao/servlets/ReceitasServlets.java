@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.google.gson.Gson;
 
-import br.com.fiap.projecao.bean.Receitas;
+import br.com.fiap.projecao.bean.Projecoes;
 
 @WebServlet(urlPatterns = "/consultar")
 public class ReceitasServlets extends HttpServlet {
@@ -22,25 +22,11 @@ public class ReceitasServlets extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-		List<Receitas> nomes = new ArrayList();
-		Receitas r = new Receitas();
-		Receitas re = new Receitas();
 		
-		r.setAno("2022");
-		r.setDescricao("Crédito");
-		r.setValor(45467878);
-		r.setId(55);
-		nomes.add(r);
-		
-		re.setAno("2020");
-		re.setDescricao("Crédito");
-		re.setValor(45467878);
-		re.setId(59);
-		nomes.add(re);
 		
 		
 		resp.setContentType("application/json");
 		
-		resp.getWriter().write(new Gson().toJson(nomes));
+		//resp.getWriter().write(new Gson().toJson(nomes));
 	}
 }

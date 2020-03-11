@@ -16,60 +16,53 @@ import javax.persistence.TemporalType;
 public class Receitas {
 
 	@Id
-	@Column(name="", nullable = false)
+	@Column(name="ID_RECEITA", nullable = false)
 	private int id;
 	
-	@Column(name="", nullable = false)
-	private String ano;
+	@Column(name = "ID_TIPO", nullable = false)
+	@Enumerated(EnumType.ORDINAL)
+	private TiposReceitas tipo;
 	
-	@Column(name="", nullable = false)
-	@Enumerated(EnumType.STRING)
-	private String descricao;
+	@Column(name = "DT_ANO", nullable = false)
+	@Temporal(TemporalType.DATE)
+	private Date ano;
 	
-	@Column(name="")
+	@Column(name = "VL_RECEITA", nullable = false)
 	private double valor;
-	
-	public Receitas(int id, String ano, String descricao, double valor) {
-		super();
-		this.id = id;
-		this.ano = ano;
-		this.descricao = descricao;
-		this.valor = valor;
-	}
-
-	public Receitas() {
-		super();
-	}
-
 	public int getId() {
 		return id;
 	}
-
 	public void setId(int id) {
 		this.id = id;
 	}
-
-	public String getAno() {
+	public TiposReceitas getTipo() {
+		return tipo;
+	}
+	public void setTipo(TiposReceitas tipo) {
+		this.tipo = tipo;
+	}
+	public Date getAno() {
 		return ano;
 	}
-
-	public void setAno(String data) {
-		this.ano = data;
+	public void setAno(Date ano) {
+		this.ano = ano;
 	}
-
-	public String getDescricao() {
-		return descricao;
-	}
-
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
-	}
-
 	public double getValor() {
 		return valor;
 	}
-
 	public void setValor(double valor) {
 		this.valor = valor;
 	}
+	public Receitas(int id, TiposReceitas tipo, Date ano, double valor) {
+		super();
+		this.id = id;
+		this.tipo = tipo;
+		this.ano = ano;
+		this.valor = valor;
+	}
+	public Receitas() {
+		super();
+	}
+	
+	
 }
