@@ -40,6 +40,13 @@
     <artifactId>jdbc-8-maven-plugin</artifactId>
     <version>8.0</version>
 </dependency>
+<dependency>
+			<groupId>oracle</groupId>
+			<artifactId>jdbc-driver</artifactId>
+			<version>12</version>
+			<scope>system</scope>
+			<systemPath>D:/ojdbc8.jar</systemPath>
+		</dependency>
 		<!-- https://mvnrepository.com/artifact/com.oracle.jdbc/ojdbc8 -->
 
   </dependencies>

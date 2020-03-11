@@ -1,15 +1,11 @@
 package br.com.fiap.projecao.bean;
 
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
 @Entity
 @Table(name="TB_RECEITA")
@@ -20,12 +16,11 @@ public class Receitas {
 	private int id;
 	
 	@Column(name = "ID_TIPO", nullable = false)
-	@Enumerated(EnumType.ORDINAL)
-	private TiposReceitas tipo;
+	@Enumerated(EnumType.STRING)
+	private String tipo;
 	
 	@Column(name = "DT_ANO", nullable = false)
-	@Temporal(TemporalType.DATE)
-	private Date ano;
+	private String ano;
 	
 	@Column(name = "VL_RECEITA", nullable = false)
 	private double valor;
@@ -35,16 +30,16 @@ public class Receitas {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public TiposReceitas getTipo() {
+	public String getTipo() {
 		return tipo;
 	}
-	public void setTipo(TiposReceitas tipo) {
+	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
-	public Date getAno() {
+	public String getAno() {
 		return ano;
 	}
-	public void setAno(Date ano) {
+	public void setAno(String ano) {
 		this.ano = ano;
 	}
 	public double getValor() {
@@ -53,7 +48,7 @@ public class Receitas {
 	public void setValor(double valor) {
 		this.valor = valor;
 	}
-	public Receitas(int id, TiposReceitas tipo, Date ano, double valor) {
+	public Receitas(int id, String tipo, String ano, double valor) {
 		super();
 		this.id = id;
 		this.tipo = tipo;

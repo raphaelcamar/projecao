@@ -7,7 +7,7 @@ function carregarLista(){
         if(xhr.status == 200){
             var proj = JSON.parse(xhr.responseText)
             proj.forEach(function(projecoes) {
-                criarLista(projecoes.descricao, projecoes.valor, projecoes.ano, projecoes.id)
+                criarLista(projecoes.tipo, projecoes.valor, projecoes.ano, projecoes.id)
             })
         }
     })
