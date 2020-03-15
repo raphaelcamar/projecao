@@ -1,12 +1,17 @@
 package br.com.fiap.projecao.bean;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 @Table(name =  "TB_PROJECAO_REC")
@@ -18,11 +23,12 @@ public class Projecao {
 	@Column(name = "ID_PROJECAO")
 	private int id;
 	
-	@Column(name = "ID_TIPO")
+	@ManyToOne
 	private Tipo tipo;
 	
 	@Column(name="DT_PROJECAO", nullable = false)
-	private int  data; 
+	@Temporal(TemporalType.DATE)
+	private Date  data; 
 	
 	@Column(name="VL_PROJECAO", nullable = false)
 	private double valor;
@@ -40,10 +46,10 @@ public class Projecao {
 	public void setTipo(Tipo tipo) {
 		this.tipo = tipo;
 	}
-	public int getData() {
+	public Date getData() {
 		return data;
 	}
-	public void setData(int data) {
+	public void setData(Date data) {
 		this.data = data;
 	}
 	public double getValor() {
@@ -52,7 +58,7 @@ public class Projecao {
 	public void setValor(double valor) {
 		this.valor = valor;
 	}
-	public Projecao(int id, Tipo tipo, int data, double valor) {
+	public Projecao(int id, Tipo tipo, Date data, double valor) {
 		super();
 		this.id = id;
 		this.tipo = tipo;

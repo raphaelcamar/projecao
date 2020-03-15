@@ -1,12 +1,18 @@
 package br.com.fiap.projecao.bean;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 @Table(name="TB_RECEITA")
@@ -18,11 +24,13 @@ public class Receita {
 	@GeneratedValue(generator = "receita", strategy = GenerationType.SEQUENCE)
 	private int id;
 	
-	@Column(name="ID_TIPO")
+	@ManyToOne
+	@JoinColumn(name= "ID_TIPO")
 	private Tipo tipo;
 	
 	@Column(name="DT_ANO")
-	private int ano;
+	@Temporal(TemporalType.DATE)
+	private Date ano;
 	
 	@Column(name="VL_RECEITA")
 	private double valor;
@@ -43,11 +51,11 @@ public class Receita {
 		this.tipo = tipo;
 	}
 
-	public int getAno() {
+	public Date getAno() {
 		return ano;
 	}
 
-	public void setAno(int ano) {
+	public void setAno(Date ano) {
 		this.ano = ano;
 	}
 
@@ -59,7 +67,7 @@ public class Receita {
 		this.valor = valor;
 	}
 
-	public Receita(int id, Tipo tipo, int ano, double valor) {
+	public Receita(int id, Tipo tipo, Date ano, double valor) {
 		super();
 		this.id = id;
 		this.tipo = tipo;

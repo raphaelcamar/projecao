@@ -1,6 +1,8 @@
 package br.com.fiap.projecao.bo;
 
-import br.com.fiap.projecao.dao.ReceitasDAO;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class ReceitasBO {
 
@@ -33,6 +35,13 @@ public class ReceitasBO {
 		double novoValor = valor * pconvertido;
 
 		return 	novoValor ;
+	}
+	
+	public Date converterData(String data) throws ParseException {
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		
+		Date dataF = sdf.parse(data);
+		return dataF;
 	}
 
 }

@@ -45,7 +45,7 @@
 			<artifactId>jdbc-driver</artifactId>
 			<version>12</version>
 			<scope>system</scope>
-			<systemPath>D:/ojdbc8.jar</systemPath>
+			<systemPath>C:\Users\Raphael Camargo\Documents\arquivos java\ojdbc8.jar</systemPath>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/com.oracle.jdbc/ojdbc8 -->
 
