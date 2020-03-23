@@ -33,7 +33,6 @@ public class RemoveServlet extends HttpServlet{
 		String q = req.getParameter("id");
 		int id = Integer.parseInt(q);
 		ProjecaoDAO dao = new ProjecaoDAOImpl(em);
-		System.out.println(id);
 		
 		try {
 			dao.deletarPorPK(id);
@@ -43,9 +42,6 @@ public class RemoveServlet extends HttpServlet{
 			
 			e.printStackTrace();
 		}
-		
-		
-		//aqui deve ser chamado o método de exclusão do objeto, e passar como parâmetro o id
 	
 	}
 		

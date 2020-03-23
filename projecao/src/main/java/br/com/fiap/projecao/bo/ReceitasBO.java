@@ -43,5 +43,22 @@ public class ReceitasBO {
 		Date dataF = sdf.parse(data);
 		return dataF;
 	}
+	
+	public String verificarTipo(String desc) {
+		if(desc.startsWith("Conta Poup")) {
+			return "Conta Poupança";
+		}
+		
+		if(desc.startsWith("Renda")) {
+			return "Renda Cartão";
+		}
+		if(desc.startsWith("Cr")) {
+			return "Crédito";
+		}
+		if(desc.startsWith("Tarifa")) {
+			return "Tarifa Interbancária";
+		}
+		return desc;
+	}
 
 }

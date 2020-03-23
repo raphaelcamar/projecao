@@ -4,6 +4,4 @@ import br.com.fiap.projecao.bean.Projecao;
 
 public interface ProjecaoDAO extends GenericDAO<Projecao, Integer>{
 
-
-	
 }

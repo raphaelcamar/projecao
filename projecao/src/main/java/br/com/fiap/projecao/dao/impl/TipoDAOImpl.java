@@ -21,7 +21,10 @@ public class TipoDAOImpl extends GenericDAOImpl<Tipo, Integer> implements TipoDA
 		return null;
 	}
 
-
-
-
+	@Override
+	public Tipo retornoPelaDesc(String s) {
+		return (Tipo) this.em.createQuery("from Tipo t where descricao = :descricao")
+				.setParameter("descricao", s)
+				.getSingleResult();
+	}
 }

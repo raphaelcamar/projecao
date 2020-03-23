@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="pt_br">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Document</title>
 <link rel="stylesheet" type="text/css" href="styles/reset.css">
@@ -22,15 +22,15 @@
 	<div class="form">
 		<form action="cadastrarReceita" method="post">
 			<div class="elements">
-				<label for="desc">Descrição</label>
-				<select id="desc" name="desc">
-                    <option value="Conta poupança">Conta Poupança</option>
-                    <option value="Conta Corrente">Conta Corrente</option>
-                    <option value="Renda de Cartão">Renda de Cartão</option>
-                    <option value="Crédito">Crédito</option>
-                    <option value="Administração de fundo">Administração de fundo</option>
-                    <option value="Tarifa Interbancária">Tarifa Interbancária</option>
-                  </select>
+				<label for="desc">Descrição</label> <select id="desc" name="desc">
+					<option value="Conta Poupança">Conta Poupança</option>
+					<option value="Conta Corrente">Conta Corrente</option>
+					<option value="Renda de Cartão">Renda de Cartão</option>
+					<option value="Crédito">Crédito</option>
+					<option value="Administração de fundo">Administração de
+						fundo</option>
+					<option value="Tarifa Interbancária">Tarifa Interbancária</option>
+				</select>
 			</div>
 
 			<div class="elements">
@@ -96,7 +96,8 @@
                   </path>
                 </svg>
 		</div>
-		<p>Aguarde enquanto estamos recuperando os dados para visualização...</p>
+		<p>Aguarde enquanto estamos recuperando os dados para
+			visualização...</p>
 	</div>
 
 	<script type="text/javascript" src="js/main.js"></script>

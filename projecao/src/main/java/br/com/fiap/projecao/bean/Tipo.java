@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "TB_TIPO")
-@SequenceGenerator(name = "tipo", sequenceName = "SQ_TB_TIPO", allocationSize = 1, initialValue = 1)
+@SequenceGenerator(name = "tipo", sequenceName = "SQ_TB_TIPO", allocationSize = 1, initialValue = 7)
 public class Tipo {
 	
 	@Id

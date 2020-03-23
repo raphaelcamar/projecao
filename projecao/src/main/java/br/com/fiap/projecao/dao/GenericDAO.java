@@ -19,4 +19,5 @@ public interface GenericDAO<E,K> {
 	void commit() throws TransacaoException;
 	
 	List<E> retornarLista();
+	
 }
