@@ -35,7 +35,7 @@
 
 			<div class="elements">
 				<label for="data">Ano da Expectativa:</label> <input type="text"
-					name="ano" id="data" placeholder="ex: 2020">
+					name="ano" id="data" placeholder="ex: 2020" required="required">
 			</div>
 			<div class="elements botao">
 				<button>Cadastrar</button>
@@ -52,12 +52,13 @@
 			<p class="title-form-cad">Editar Projeção</p>
 			<form action="editarInfos" method="post">
 
-				<label for="desc">Descrição:</label> <input type="text" name="desc"
-					id="descEdit"> <label for="anoEdit">Projeção para:</label>
-				<input type="text" name="ano" id="anoEdit"> <label
-					for="valorEdit">Valor projetado(M):</label> <input type="number"
-					name="valor" id="valorEdit"> <input type="hidden" name="id">
-
+				<label for="desc">Descrição:</label> 
+				<input type="text" name="desc" id="descEdit" required="required">
+				<label for="anoEdit">Projeção para:</label>
+				<input type="text" name="ano" id="anoEdit" required="required">
+				<label for="valorEdit">Valor projetado(M):</label>
+				<input type="number" name="valor" id="valorEdit">
+				<input type="hidden" name="id">
 				<button id="att">Atualizar</button>
 			</form>
 		</div>

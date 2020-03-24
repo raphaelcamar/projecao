@@ -142,7 +142,7 @@ display:none;
   animation-duration: 0.4s;
 }
 .edit form{
-width:90%;
+width:80%;
 background-color:#e5e5e5;
 display: flex;
 justify-content: center;
@@ -164,7 +164,6 @@ width:30%;
   font-size:35px;
   margin-top:5%;
   margin-bottom:3%;
-  
 }
 #att{
 background-color:#11ab11;
@@ -185,4 +184,10 @@ margin-bottom:5%;
 }
 .inativo{
 display:none;
+}
+.font-desc{
+  font-size: 15px;
+}
+.font-desc button{
+  font-size: 12px;
 }

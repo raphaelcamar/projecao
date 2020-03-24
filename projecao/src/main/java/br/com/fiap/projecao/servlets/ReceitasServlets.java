@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.google.gson.Gson;
 
 import br.com.fiap.projecao.bean.Projecao;
-import br.com.fiap.projecao.bean.Receita;
+
 import br.com.fiap.projecao.dao.ProjecaoDAO;
 import br.com.fiap.projecao.dao.impl.ProjecaoDAOImpl;
 import br.com.fiap.projecao.singleton.EMFsingleton;

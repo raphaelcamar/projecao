@@ -62,4 +62,6 @@ public abstract class GenericDAOImpl<E, K> implements GenericDAO<E, K> {
 			throw new TransacaoException();
 		}
 	}
+	
+
 }

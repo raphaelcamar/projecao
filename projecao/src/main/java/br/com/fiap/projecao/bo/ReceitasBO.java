@@ -44,13 +44,13 @@ public class ReceitasBO {
 		return dataF;
 	}
 	
+	//Verificar o tipo dee receita. Foi necessário fazer pois o encoding estava retornando as Strings erradas.
 	public String verificarTipo(String desc) {
 		if(desc.startsWith("Conta Poup")) {
 			return "Conta Poupança";
 		}
-		
 		if(desc.startsWith("Renda")) {
-			return "Renda Cartão";
+			return "Renda de Cartão";
 		}
 		if(desc.startsWith("Cr")) {
 			return "Crédito";
@@ -58,7 +58,60 @@ public class ReceitasBO {
 		if(desc.startsWith("Tarifa")) {
 			return "Tarifa Interbancária";
 		}
+		if(desc.startsWith("Adminis")) {
+			return "Administração de fundo";
+		}
 		return desc;
 	}
+	
+	//comparar mês
+	public int compararMes(String mes) {
+		
+		if(mes.startsWith("jan")) {
+			return 1;
+		}
+		if(mes.startsWith("fev")) {
+			return 2;
+		}
+		if(mes.startsWith("mar")) {
+			return 3;
+		}
+		if(mes.startsWith("abr")) {
+			return 4;
+		}
+		if(mes.startsWith("mai")) {
+			return 5;
+		}
+		if(mes.startsWith("jun")) {
+			return 6;
+		}
+		if(mes.startsWith("jul")) {
+			return 7;
+		}
+		if(mes.startsWith("ago")) {
+			return 8;
+		}
+		if(mes.startsWith("set")) {
+			return 9;
+		}
+		if(mes.startsWith("out")) {
+			return 10;
+		}
+		if(mes.startsWith("nov")) {
+			return 11;
+		}
+		if(mes.startsWith("dez")) {
+			return 12;
+		}
+		return 0;
+	}
 
+	public String dataFormatada(String d) {
+		String[] dataSeparada = d.split(" ");
+		int n = compararMes(d);
+		String novaString = dataSeparada[1] + "/" + n + "/" + dataSeparada[2];
+		String dataFormatada = novaString.replace(",", "");
+		
+		return dataFormatada;
+	}
 }

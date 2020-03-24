@@ -10,6 +10,7 @@ function carregarLista() {
 			proj.forEach(function(projecoes) {
 				criarLista(projecoes.tipo.descricao, projecoes.valor,
 						projecoes.data, projecoes.id)
+						
 			})
 		}
 	})
@@ -57,17 +58,18 @@ function criarLista(descricao, valor, data, id) {
 	btnEdit.classList.add('editBtn')
 
 	tdDesc.textContent = descricao
-	tdValor.textContent = valor
+	tdValor.textContent = +valor.toFixed(2)
+	
 	tdData.textContent = data
 
 	tdBotao.appendChild(btnEdit)
 	tdBotaoDel.appendChild(btnDel)
 
-	tr.appendChild(tdDesc)
-	tr.appendChild(tdData)
-	tr.appendChild(tdValor)
-	tr.appendChild(tdBotao)
-	tr.appendChild(tdBotaoDel)
+	tr.appendChild(tdDesc).classList.add('font-desc')
+	tr.appendChild(tdData).classList.add('font-desc')
+	tr.appendChild(tdValor).classList.add('font-desc')
+	tr.appendChild(tdBotao).classList.add('font-desc')
+	tr.appendChild(tdBotaoDel).classList.add('font-desc')
 
 	adcionarListenerEdit(tdBotao)
 	adcionarListenerDel(tdBotaoDel)
@@ -84,7 +86,7 @@ function adcionarListenerEdit(elemento) {
 		var descEd = tdValores[0].textContent
 		var proEd = tdValores[1].textContent
 		var valorEd = tdValores[2].textContent
-		console.log(valorEd)
+	
 		var idEd = e.target.id
 
 		adionarAoInputEdicao(descEd, proEd, valorEd, idEd)
@@ -98,7 +100,6 @@ function adcionarListenerDel(elemento) {
         var tr = tdBotao.parentNode
         tr.classList.add('remove')
         tr.remove()
-        console.log(tr)
 		EnviarId(ids)
 	})
 }
@@ -140,7 +141,6 @@ function tornarVisivel(visivel) {
 }
 
 function scrollAnm(element) {
-	console.log(element.offsetTop)
 	window.scroll({
 		behavior : 'smooth',
 		left : 0,
